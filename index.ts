@@ -12,8 +12,6 @@ async function automateKeyAndMouseMovement() {
     await keyboard.pressKey(Key.LeftShift);
     await keyboard.pressKey(Key.Tab);
     await keyboard.releaseKey(Key.Tab);
-    await keyboard.pressKey(Key.Tab);
-    await keyboard.releaseKey(Key.Tab);
     await keyboard.releaseKey(Key.LeftControl);
     await keyboard.releaseKey(Key.LeftShift);
 
@@ -26,6 +24,16 @@ async function automateKeyAndMouseMovement() {
     await keyboard.releaseKey(Key.Up);
 
     await keyboard.releaseKey(Key.LeftSuper);
+
+    await keyboard.pressKey(Key.LeftAlt);
+    await keyboard.pressKey(Key.Tab);
+    await keyboard.releaseKey(Key.Tab);
+    await keyboard.releaseKey(Key.LeftAlt);
+
+    await keyboard.pressKey(Key.LeftAlt);
+    await keyboard.pressKey(Key.Tab);
+    await keyboard.releaseKey(Key.Tab);
+    await keyboard.releaseKey(Key.LeftAlt);
 
     await mouse.move([new Point(randomx, randomy)]);
 }
