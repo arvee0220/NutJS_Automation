@@ -6,7 +6,7 @@ async function automateKeyAndMouseMovement() {
     const randomx = Math.ceil(random);
     const randomy = Math.ceil(random2);
 
-    keyboard.config.autoDelayMs = 100;
+    keyboard.config.autoDelayMs = 200;
 
     await keyboard.pressKey(Key.LeftControl);
     await keyboard.pressKey(Key.LeftShift);
@@ -51,8 +51,8 @@ async function automateMouseMovement() {
 
 setInterval(() => {
     automateKeyAndMouseMovement().catch((e) => console.log(e));
-}, 4000);
+}, 6000);
 
 setInterval(() => {
     automateMouseMovement().catch((e) => console.log(e));
-}, 6000);
+}, 8000);
