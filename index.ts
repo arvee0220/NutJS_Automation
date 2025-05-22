@@ -1,6 +1,6 @@
 import { keyboard, mouse, Key, screen, left, Point } from "@nut-tree-fork/nut-js";
 
-const RANDOM_INTERVAL = Math.ceil(Math.random() * 600000);
+const RANDOM_INTERVAL = Math.ceil(Math.random() * 300000);
 const RANDOM_INTERVAL2 = Math.ceil(Math.random() * 600000);
 
 async function automateKeyAndMouseMovement() {
