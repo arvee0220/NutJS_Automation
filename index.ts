@@ -15,15 +15,15 @@ async function automateKeyAndMouseMovement() {
     await keyboard.releaseKey(Key.LeftControl);
     await keyboard.releaseKey(Key.LeftShift);
 
-    await keyboard.pressKey(Key.LeftSuper);
+    // await keyboard.pressKey(Key.LeftSuper);
 
-    await keyboard.pressKey(Key.Down);
-    await keyboard.releaseKey(Key.Down);
+    // await keyboard.pressKey(Key.Down);
+    // await keyboard.releaseKey(Key.Down);
 
-    await keyboard.pressKey(Key.Up);
-    await keyboard.releaseKey(Key.Up);
+    // await keyboard.pressKey(Key.Up);
+    // await keyboard.releaseKey(Key.Up);
 
-    await keyboard.releaseKey(Key.LeftSuper);
+    // await keyboard.releaseKey(Key.LeftSuper);
 
     await keyboard.pressKey(Key.LeftAlt);
     await keyboard.pressKey(Key.Tab);
