@@ -51,8 +51,8 @@ async function automateMouseMovement() {
 
 setInterval(() => {
     automateKeyAndMouseMovement().catch((e) => console.log(e));
-}, 10000);
+}, 12000);
 
 setInterval(() => {
     automateMouseMovement().catch((e) => console.log(e));
-}, 12000);
+}, 14000);
