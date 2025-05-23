@@ -1,8 +1,7 @@
 import { keyboard, mouse, Key, screen, left, Point } from "@nut-tree-fork/nut-js";
 
 const intervalArray = [
-    Math.ceil(Math.random() * 120000),
-    Math.ceil(Math.random() * 60000),
+    Math.ceil(Math.random() * 120000),    
     Math.floor(Math.random() * 30000),
     Math.ceil(Math.random() * 180000)
 ];
