@@ -4,7 +4,7 @@ const intervalArray = [
     Math.ceil(Math.random() * 120000),
     Math.ceil(Math.random() * 60000),
     Math.floor(Math.random() * 30000),
-    Math.ceil(Math.random() * 600000)
+    Math.ceil(Math.random() * 180000)
 ];
 
 const RANDOM_INTERVAL = intervalArray[Math.floor(Math.random() * intervalArray.length)];
