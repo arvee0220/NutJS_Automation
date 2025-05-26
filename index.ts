@@ -1,11 +1,6 @@
 import { keyboard, mouse, Key, Point } from "@nut-tree-fork/nut-js";
 import { getRandomFromArray } from "./helper.ts";
 
-const intervalArray = [Math.ceil(Math.random() * 18000), Math.floor(Math.random() * 12000), 10000, 30000];
-
-const RANDOM_INTERVAL = intervalArray[Math.floor(Math.random() * intervalArray.length)];
-const RANDOM_INTERVAL2 = Math.ceil(Math.random() * 120000);
-
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 async function automateKeyAndMouseMovement() {
@@ -38,7 +33,7 @@ async function automateKeyAndMouseMovement() {
     await keyboard.releaseKey(Key.Tab);
     await keyboard.releaseKey(Key.LeftAlt);
 
-    await sleep(5000);
+    await sleep(4000);
 
     await keyboard.pressKey(Key.LeftAlt);
     await keyboard.pressKey(Key.Tab);
@@ -65,7 +60,7 @@ async function runKeyAndMouseLoop() {
     } catch (e) {
         console.error("Key and mouse error:", e);
     }
-    const nextDelay = getRandomFromArray([Math.ceil(Math.random() * 15000), Math.floor(Math.random() * 12000), 10000, 20000]);
+    const nextDelay = getRandomFromArray([Math.ceil(Math.random() * 10000), Math.floor(Math.random() * 10000), 10000, 20000]);
     setTimeout(runKeyAndMouseLoop, nextDelay);
 }
 
