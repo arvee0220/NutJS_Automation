@@ -38,7 +38,7 @@ async function automateKeyAndMouseMovement() {
     await keyboard.releaseKey(Key.Tab);
     await keyboard.releaseKey(Key.LeftAlt);
 
-    await sleep(60000);
+    await sleep(20000);
 
     await keyboard.pressKey(Key.LeftAlt);
     await keyboard.pressKey(Key.Tab);
@@ -65,7 +65,7 @@ async function runKeyAndMouseLoop() {
     } catch (e) {
         console.error("Key and mouse error:", e);
     }
-    const nextDelay = getRandomFromArray([Math.ceil(Math.random() * 18000), Math.floor(Math.random() * 12000), 10000, 30000]);
+    const nextDelay = getRandomFromArray([Math.ceil(Math.random() * 18000), Math.floor(Math.random() * 12000), 10000, 20000]);
     setTimeout(runKeyAndMouseLoop, nextDelay);
 }
 
