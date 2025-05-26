@@ -1,5 +1,5 @@
 import { keyboard, mouse, Key, Point } from "@nut-tree-fork/nut-js";
-import { getRandomFromArray } from "./helper";
+import { getRandomFromArray } from "./helper.ts";
 
 const intervalArray = [Math.ceil(Math.random() * 18000), Math.floor(Math.random() * 12000), 10000, 30000];
 
