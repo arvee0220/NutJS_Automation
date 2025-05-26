@@ -1,16 +1,12 @@
 import { keyboard, mouse, Key, Point } from "@nut-tree-fork/nut-js";
+import { getRandomFromArray } from "./helper";
 
-const intervalArray = [
-    Math.ceil(Math.random() * 18000),
-    Math.floor(Math.random() * 12000),
-    10000,
-    30000
-];
+const intervalArray = [Math.ceil(Math.random() * 18000), Math.floor(Math.random() * 12000), 10000, 30000];
 
 const RANDOM_INTERVAL = intervalArray[Math.floor(Math.random() * intervalArray.length)];
 const RANDOM_INTERVAL2 = Math.ceil(Math.random() * 120000);
 
-const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 async function automateKeyAndMouseMovement() {
     const random = Math.random() * 1000;
@@ -63,10 +59,25 @@ async function automateMouseMovement() {
     await mouse.move([new Point(currentPosition.x + randomx, currentPosition.y + randomy)]);
 }
 
-setInterval(() => {
-    automateKeyAndMouseMovement().catch((e) => console.log(e));
-}, RANDOM_INTERVAL);
+async function runKeyAndMouseLoop() {
+    try {
+        await automateKeyAndMouseMovement();
+    } catch (e) {
+        console.error("Key and mouse error:", e);
+    }
+    const nextDelay = getRandomFromArray([Math.ceil(Math.random() * 18000), Math.floor(Math.random() * 12000), 10000, 30000]);
+    setTimeout(runKeyAndMouseLoop, nextDelay);
+}
 
-setInterval(() => {
-    automateMouseMovement().catch((e) => console.log(e));
-}, RANDOM_INTERVAL2);
+async function runMouseOnlyLoop() {
+    try {
+        await automateMouseMovement();
+    } catch (e) {
+        console.error("Mouse movement error:", e);
+    }
+    const nextDelay = Math.ceil(Math.random() * 120000); // Up to 2 minutes
+    setTimeout(runMouseOnlyLoop, nextDelay);
+}
+
+runKeyAndMouseLoop();
+runMouseOnlyLoop()
