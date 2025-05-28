@@ -60,7 +60,7 @@ async function runKeyAndMouseLoop() {
     } catch (e) {
         console.error("Key and mouse error:", e);
     }
-    const nextDelay = getRandomFromArray([Math.ceil(Math.random() * 2000), Math.floor(Math.random() * 2000), 2000, 8000]);
+    const nextDelay = getRandomFromArray([Math.ceil(Math.random() * 2000), Math.floor(Math.random() * 2000), 2000, 60000]);
     setTimeout(runKeyAndMouseLoop, nextDelay);
 }
 
