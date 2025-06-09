@@ -35,6 +35,9 @@ async function automateKeyAndMouseMovement() {
 
     await sleep(3000);
 
+    await keyboard.pressKey(Key.F5);
+    await keyboard.releaseKey(Key.F5);
+
     await keyboard.pressKey(Key.LeftAlt);
     await keyboard.pressKey(Key.Tab);
     await keyboard.releaseKey(Key.Tab);
