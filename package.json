@@ -2,11 +2,12 @@
     "name": "automation",
     "version": "1.0.0",
     "description": "",
-    "main": "index.ts",
+    "main": "medium.ts",
     "type": "module",
     "scripts": {
-        "start": "node --loader ts-node/esm --watch index.ts",
-        "commence": "node --loader ts-node/esm --watch main.ts",
+        "medium": "node --loader ts-node/esm --watch medium.ts",
+        "slow": "node --loader ts-node/esm --watch slow.ts",
+        "fast": "node --loader ts-node/esm --watch fast.ts",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
