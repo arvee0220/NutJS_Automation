@@ -18,6 +18,20 @@ async function automateKeyAndMouseMovement() {
     await keyboard.releaseKey(Key.LeftControl);
     await keyboard.releaseKey(Key.LeftShift);
 
+    await keyboard.pressKey(Key.LeftControl);
+    await keyboard.pressKey(Key.LeftShift);
+    await keyboard.pressKey(Key.Tab);
+    await keyboard.releaseKey(Key.Tab);
+    await keyboard.releaseKey(Key.LeftControl);
+    await keyboard.releaseKey(Key.LeftShift);
+
+    await keyboard.pressKey(Key.LeftControl);
+    await keyboard.pressKey(Key.LeftShift);
+    await keyboard.pressKey(Key.Tab);
+    await keyboard.releaseKey(Key.Tab);
+    await keyboard.releaseKey(Key.LeftControl);
+    await keyboard.releaseKey(Key.LeftShift);
+
     await keyboard.pressKey(Key.LeftSuper);
 
     await keyboard.pressKey(Key.Down);
@@ -38,6 +52,10 @@ async function automateKeyAndMouseMovement() {
     await keyboard.pressKey(Key.LeftControl);
     await keyboard.pressKey(Key.Num7);
     await keyboard.releaseKey(Key.Num7);
+    await keyboard.pressKey(Key.Num6);
+    await keyboard.releaseKey(Key.Num6);
+    await keyboard.pressKey(Key.Num5);
+    await keyboard.releaseKey(Key.Num5);
     await keyboard.pressKey(Key.Num6);
     await keyboard.releaseKey(Key.Num6);
     await keyboard.releaseKey(Key.LeftControl);
